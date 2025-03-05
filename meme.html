@@ -4,26 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meme Generator</title>
+    <link rel="stylesheet" href="meme.css">
 </head>
-<h1>Meme Generator</h1>
+
 <body>
+    <h1>
+        <span class="letter">M</span>
+        <span class="letter">e</span>
+        <span class="letter">m</span>
+        <span class="letter">e</span>
+        <span class="space"> </span>
+        <span class="letter">G</span>
+        <span class="letter">e</span>
+        <span class="letter">n</span>
+        <span class="letter">e</span>
+        <span class="letter">r</span>
+        <span class="letter">a</span>
+        <span class="letter">t</span>
+        <span class="letter">o</span>
+        <span class="letter">r</span>
+    </h1>
     <h2>Fill out the form to start creating memes!</h2>
-    <form>
-    <div>
-        <label for="topText">Link for Image</label>
-        <input type="text" id="memeImg" placeholder="What's the URL for your meme image?">
-    </div>
-    <div>
-        <label for="topText">Text for Top</label>
-        <input type="text" id="topText" placeholder="(Optional) What text do you want at the top of the meme?">
-    </div>
-    <div>
-        <label for="bottomText">Text for Bottom</label>
-        <input type="text" id="bottomText" placeholder="(Optional) What text do you want at the bottom of the meme?">
-    </div>
-        <button>Add Meme</button>
+    <form id="meme-Generator">
+    <ul>
+        <li>
+            <div>
+                <label for="topText">Link for Image</label>
+                <input type="text" id="memeImg" placeholder="What's the URL for your meme image?">
+            </div>
+        </li>
+        <li>
+            <div>
+                <label for="topText">Text for Top</label>
+                <input type="text" id="topText" placeholder="(Optional) What text do you want at the top of the meme?">
+            </div>
+        </li>
+        <li>
+            <div>
+                <label for="bottomText">Text for Bottom</label>
+                <input type="text" id="bottomText" placeholder="(Optional) What text do you want at the bottom of the meme?">
+            </div>
+        </li>
+    </ul>
+        <button id="submit">Add Meme</button>
     </form>
-    
+    <script src="meme.js"></script>
 </body>
-<script src="meme.js"></script>
+
 </html>

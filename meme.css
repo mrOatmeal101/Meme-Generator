@@ -1,0 +1,20 @@
+body {
+
+    background-color: lightblue;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+}
+
+.letter {
+    transition: color 1000ms;
+}
+
+.space {
+    display: inline-block;
+    width: 10px;
+}
