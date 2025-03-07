@@ -2,13 +2,20 @@ body {
 
     background-color: lightblue;
 }
-
 h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3rem;
+    font-size: 10vw;
+    transition: all 3s;
 }
+
+/* h1:hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+} */
 
 .letter {
     transition: color 1000ms;
@@ -16,5 +23,10 @@ h1 {
 
 .space {
     display: inline-block;
-    width: 10px;
+    width: 3vw;
+}
+
+img {
+    width: 50vw;
+    height: 50vw;
 }

@@ -30,5 +30,89 @@ const letters = document.querySelectorAll('.letter')
 setInterval(function () {
     for (let letter of letters){
         letter.style.color = randomRGB()
+
     }
 }, 1000)
+
+
+// inputImg.setAttribute = ('src', 'https://en.wikipedia.org/wiki/Tabby_cat#/media/File:Cat_November_2010-1a.jpg')
+
+
+
+function makeMeme() {
+
+    const inputImg = document.querySelector("#memeImg").value
+    const newMemeImg = document.createElement('img')
+    if(inputImg){
+        newMemeImg.src = inputImg;
+        newMemeImg.style.display = 'block'
+    }
+
+
+    const topText = document.querySelector('#topText')
+    const newMemeTopText = document.createElement('div')
+    newMemeTopText.textContent = topText.value
+    newMemeTopText.classList.add('outputMeme')
+
+    const bottomText = document.querySelector('#bottomText')
+    const newMemeBottomText = document.createElement('div')
+    newMemeBottomText.textContent = bottomText.value
+    newMemeBottomText.classList.add('outputMeme')
+
+    const removeButton = document.createElement('button')
+    removeButton.id = '#removeButton'
+    removeButton.innerText = "Remove"
+
+    const newMeme = document.querySelector("#results")
+    newMeme.append(newMemeTopText, newMemeBottomText, newMemeImg)
+    newMeme.appendChild(removeButton)
+
+    topText.value = ''
+    bottomText.value = ''
+    inputImg.value = ' '
+
+}
+
+
+// const removeMeme = document.querySelectorAll("#results")
+// for(let btn of removeMeme){
+//     btn.addEventListener('click', function(e){
+//         console.log('remove button')
+//         console.log(e)
+//         e.target.parentElement.remove()
+//     })
+
+// }
+
+
+const form = document.querySelector("#meme-Generator")
+form.addEventListener('submit', function(evt) {
+    evt.preventDefault()
+    makeMeme()
+})
+
+// const genMeme = document.querySelector('#submit')
+// genMeme.addEventListener("click", function() {
+//     makeMeme()
+// })
+
+// const form = document.querySelector('.meme-Generator')
+// const newImg = document.querySelector('#memeImg')
+// const topText = document.querySelector('#topText')
+// const bottomText = document.querySelector('#bottomText')
+
+// const newMeme = document.querySelector('.newMeme')
+
+// form.addEventListener('submit', function(e) {
+//     e.preventDefault()
+//     const makeNewMeme = makeMeme(
+//         newImg.value,
+//         topText.value,
+//         bottomText.value
+//     )
+// })
+
+// function makeMeme(newImg, topText, bottomText) {
+//     const meme = document.createElement('div')
+    
+// }
