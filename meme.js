@@ -35,6 +35,8 @@ setInterval(function () {
 
 
 // inputImg.setAttribute = ('src', 'https://en.wikipedia.org/wiki/Tabby_cat#/media/File:Cat_November_2010-1a.jpg')
+
+// switch for light and dark mode on site and will remember pref
 const toggleSwitch = document.querySelector('input[type="checkbox"]')
 
 if (localStorage.getItem('darkModeEnabled')){
@@ -63,7 +65,7 @@ function makeMeme() {
     
     if(inputImg){
         newMemeImg.src = inputImg;
-        newMemeImg.style.display = 'block'
+        newMemeImg.className = 'newImg'
     }
 
     const topText = document.querySelector('#topText')
@@ -76,13 +78,14 @@ function makeMeme() {
     newMemeBottomText.textContent = bottomText.value
     newMemeBottomText.classList.add('bottomText')
 
+
     const removeButton = document.createElement('button')
-    removeButton.id = '#removeButton'
+    removeButton.id = '#removeMe'
     removeButton.innerText = "Remove"
 
     const newMeme = document.querySelector("#results")
     newMeme.append(newMemeTopText, newMemeBottomText, newMemeImg)
-    newMeme.appendChild(removeButton) 
+    newMeme.append(removeButton)
 
     topText.value = ''
     bottomText.value = ''
@@ -90,16 +93,12 @@ function makeMeme() {
 
 }
 
-// switch for light and dark mode on site and will remember pref
-
-
-
-// const removeMeme = document.querySelectorAll("#results")
+// const removeMeme = document.getElementsByClassName('removeMe-button')
 // for(let btn of removeMeme){
 //     btn.addEventListener('click', function(e){
 //         console.log('remove button')
 //         console.log(e)
-//         e.target.parentElement.remove()
+//         e.target.getElementClass().remove()
 //     })
 
 // }

@@ -1,6 +1,57 @@
+/* base settings */
 body {
     margin: 0;
 }
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    transition: all 2s;
+    background-color: black;
+    border-radius: 10px;
+    
+}
+
+h2 {
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    margin-left: 10px;
+    font-size: 3vw;
+    font-family:'Times New Roman', Times, serif;
+    
+}
+
+button {
+    display: inline-block;
+    padding: 10px 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    outline: none;
+    color: #fff;
+    background-color: #04AA6D;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 4px #999;
+    transition-duration: 0.4s;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-left: 10px;
+  }
+  
+  button:hover {
+    background-color: rgb(1, 114, 58);
+    }
+  
+  button:active {
+    background-color: forestgreen;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  } 
 
 .container {
     background-color: lightblue;
@@ -65,55 +116,7 @@ body {
     display: grid;
 }
 
-h1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 8vw;
-    transition: all 2s;
-    background-color: black;
-    border-radius: 10px;
-    
-}
 
-h2 {
-    display: flex;
-    justify-content: left;
-    align-items: flex-start;
-    margin-left: 10px;
-    font-size: 3vw;
-    font-family:'Times New Roman', Times, serif;
-    
-}
-
-button {
-    display: inline-block;
-    padding: 10px 10px;
-    font-size: 15px;
-    font-weight: bold;
-    cursor: pointer;
-    text-align: center;
-    outline: none;
-    color: #fff;
-    background-color: #04AA6D;
-    border: none;
-    border-radius: 50px;
-    box-shadow: 0 4px #999;
-    transition-duration: 0.4s;
-    margin-bottom: 10px;
-    margin-top: 5px;
-    margin-left: 10px;
-  }
-  
-  button:hover {
-    background-color: rgb(1, 114, 58);
-    }
-  
-  button:active {
-    background-color: forestgreen;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-  } 
 
 /* .memeForm {
 
@@ -181,6 +184,7 @@ input[type="checkbox"]:checked + .toggle-container:after {
     position: relative;
     color: white;
     text-align: center;
+    padding: 10px;
 }
 
 .topText {
@@ -191,7 +195,8 @@ input[type="checkbox"]:checked + .toggle-container:after {
     position: absolute;
   }
 
-img {
-    width: 50vw;
-    height: 50vw;
+.newImg {
+    width: 20rem;
+    height: 20rem;
+    padding: 1rem;
 }
