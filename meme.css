@@ -1,20 +1,124 @@
 body {
-
-    background-color: lightblue;
+    margin: 0;
 }
+
+.container {
+    background-color: lightblue;
+    padding: 10px;
+    position: relative;
+    
+}
+
+.dark {
+    background-color: black;
+}
+
+.dark h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8vw;
+    transition: all 2s;
+    color: white;
+}
+
+.dark h2 {
+    color: white;
+    display: flex;
+    justify-content: left;
+    margin-left: 10px;
+    align-items: flex-start;
+    font-size: 3vw;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.dark .user-input {
+    color: white;
+    margin-bottom: 5px;
+    margin-bottom: 5px;
+    width: 50vw;
+}
+
+.dark .user-input-label {
+        color: white;
+        margin-bottom: 5px;
+        margin-bottom: 5px;
+        width: 50vw;
+        
+    }
+
+.user-input {
+    color: black;
+    margin: 5px;
+    margin-left: 15px;
+    width: 50vw;
+    padding: 1vw 1vh;
+    border-radius: 4px;
+}
+
+.user-input-label {
+    justify-content: left;
+    font-size: 3vw;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    padding: 5px 5px 5px;
+    display: grid;
+}
+
 h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 10vw;
-    transition: all 3s;
+    font-size: 8vw;
+    transition: all 2s;
+    background-color: black;
+    border-radius: 10px;
+    
 }
 
-/* h1:hover {
+h2 {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3rem;
+    justify-content: left;
+    align-items: flex-start;
+    margin-left: 10px;
+    font-size: 3vw;
+    font-family:'Times New Roman', Times, serif;
+    
+}
+
+button {
+    display: inline-block;
+    padding: 10px 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    outline: none;
+    color: #fff;
+    background-color: #04AA6D;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 4px #999;
+    transition-duration: 0.4s;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-left: 10px;
+  }
+  
+  button:hover {
+    background-color: rgb(1, 114, 58);
+    }
+  
+  button:active {
+    background-color: forestgreen;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  } 
+
+/* .memeForm {
+
+    position: relative;
+
 } */
 
 .letter {
@@ -25,6 +129,67 @@ h1 {
     display: inline-block;
     width: 3vw;
 }
+
+/* switch for light and dark mode on site and will remember pref */
+
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+.toggle-container {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 70px;
+	height: 29px;
+	background: grey;
+	display: block;
+	border-radius: 100px;
+	position: relative;
+ 
+    
+}
+
+.toggle-container:after {
+	content: '';
+	position: absolute;
+	top: 4px;
+	left: 5px;
+	width: 21px;
+	height: 21px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+input[type="checkbox"]:checked + .toggle-container {
+	background: #0b9fda;
+}
+
+input[type="checkbox"]:checked + .toggle-container:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+.toggle-container:active:after {
+	width: 13px;
+}
+
+/* text over new meme formatting */
+.results {
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+.topText {
+    position: absolute;
+  }
+
+.bottomText {
+    position: absolute;
+  }
 
 img {
     width: 50vw;

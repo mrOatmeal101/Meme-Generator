@@ -8,6 +8,11 @@
 </head>
 
 <body>
+    <div class="container">
+    <div>
+        <input type="checkbox" id="switch"><label for="switch" class="toggle-container">Toggle</label>
+    </div>
+
     <h1>
         <span class="letter "big">M</span>
         <span class="letter "big">e</span>
@@ -27,28 +32,32 @@
     <h2>Fill out the form to start creating memes!</h2>
     <div class="memeForm">
         <form id="meme-Generator">
-        <ul>
-            <li>
-                <label for="memeImg">Link for Image:
-                    <input type="text" id="memeImg" placeholder="What's the URL for your meme image?">
-                </label>
-            </li>
-            <li>
-                <label for="topText">Text for Top: 
-                    <input type="text" id="topText" placeholder="(Optional) What text do you want at the top of the meme?">
-                </label>
-            </li>
-            <li>
-                <label for="bottomText">Text for Bottom: 
-                    <input type="text" id="bottomText" placeholder="(Optional) What text do you want at the bottom of the meme?">
-                </label>
-        </ul>
+        <!-- <ul> -->
+        <label for="memeImg" class="user-input-label">Link for Image:
+            <input type="text" id="memeImg" class="user-input" placeholder="What's the URL for your meme image?">
+        </label>
+            
+            
+        <label for="topText" class="user-input-label">Text for Top: 
+            <input type="text" id="topText" class="user-input" placeholder="(Optional) What text do you want at the top of the meme?">
+        </label>
+            
+            
+        <label for="bottomText" class="user-input-label">Text for Bottom: 
+             <input type="text" id="bottomText" class="user-input" placeholder="(Optional) What text do you want at the bottom of the meme?">
+        </label>
+            
+        <!-- </ul> -->
             <button type="submit">Add Meme</button>
         </form>
     </div>
-    <section id="results">
+</div>
 
-    </section>
+    <div id="results">
+
+    </div>
+
+  
     <script src="meme.js"></script>
 </body>
 

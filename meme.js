@@ -30,34 +30,51 @@ const letters = document.querySelectorAll('.letter')
 setInterval(function () {
     for (let letter of letters){
         letter.style.color = randomRGB()
-
     }
-}, 1000)
+}, 900)
 
 
 // inputImg.setAttribute = ('src', 'https://en.wikipedia.org/wiki/Tabby_cat#/media/File:Cat_November_2010-1a.jpg')
+const toggleSwitch = document.querySelector('input[type="checkbox"]')
 
+if (localStorage.getItem('darkModeEnabled')){
+    document.body.className = 'dark'
+    toggleSwitch.checked = true
+}
+
+toggleSwitch.addEventListener('click', function(e){
+
+    if(toggleSwitch.checked){
+        document.body.className = 'dark'
+        localStorage.setItem('darkModeEnabled', true)
+    }
+    else{
+        document.body.className = ''
+        localStorage.removeItem('darkModeEnabled', false)
+    }
+    
+})
 
 
 function makeMeme() {
 
     const inputImg = document.querySelector("#memeImg").value
     const newMemeImg = document.createElement('img')
+    
     if(inputImg){
         newMemeImg.src = inputImg;
         newMemeImg.style.display = 'block'
     }
 
-
     const topText = document.querySelector('#topText')
     const newMemeTopText = document.createElement('div')
     newMemeTopText.textContent = topText.value
-    newMemeTopText.classList.add('outputMeme')
+    newMemeTopText.classList.add('topText')
 
     const bottomText = document.querySelector('#bottomText')
     const newMemeBottomText = document.createElement('div')
     newMemeBottomText.textContent = bottomText.value
-    newMemeBottomText.classList.add('outputMeme')
+    newMemeBottomText.classList.add('bottomText')
 
     const removeButton = document.createElement('button')
     removeButton.id = '#removeButton'
@@ -65,13 +82,16 @@ function makeMeme() {
 
     const newMeme = document.querySelector("#results")
     newMeme.append(newMemeTopText, newMemeBottomText, newMemeImg)
-    newMeme.appendChild(removeButton)
+    newMeme.appendChild(removeButton) 
 
     topText.value = ''
     bottomText.value = ''
     inputImg.value = ' '
 
 }
+
+// switch for light and dark mode on site and will remember pref
+
 
 
 // const removeMeme = document.querySelectorAll("#results")
