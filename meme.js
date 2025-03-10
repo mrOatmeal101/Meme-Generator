@@ -84,24 +84,23 @@ function makeMeme() {
     removeButton.innerText = "Remove"
 
     const newMeme = document.querySelector("#results")
-    newMeme.append(newMemeTopText, newMemeBottomText, newMemeImg)
-    newMeme.append(removeButton)
+    newMeme.append(newMemeTopText, newMemeBottomText, newMemeImg, removeButton)
 
     topText.value = ''
     bottomText.value = ''
-    inputImg.value = ' '
+    inputImg.value = ''
 
 }
 
-// const removeMeme = document.getElementsByClassName('removeMe-button')
-// for(let btn of removeMeme){
-//     btn.addEventListener('click', function(e){
-//         console.log('remove button')
-//         console.log(e)
-//         e.target.getElementClass().remove()
-//     })
+const removeMeme = document.getElementsByClassName('removeMe-button')
+for(let btn of removeMeme){
+    btn.addEventListener('click', function(e){
+        console.log('remove button')
+        console.log(e)
+        e.target.getElementClass().remove()
+    })
 
-// }
+}
 
 
 const form = document.querySelector("#meme-Generator")
