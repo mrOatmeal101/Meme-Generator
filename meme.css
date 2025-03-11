@@ -11,7 +11,6 @@ h1 {
     transition: all 2s;
     background-color: black;
     border-radius: 10px;
-    
 }
 
 h2 {
@@ -19,9 +18,8 @@ h2 {
     justify-content: left;
     align-items: flex-start;
     margin-left: 10px;
-    font-size: 3vw;
+    font-size: 2rem;
     font-family:'Times New Roman', Times, serif;
-    
 }
 
 button {
@@ -57,7 +55,12 @@ button {
     background-color: lightblue;
     padding: 10px;
     position: relative;
-    
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.dark .container {
+    background-color: rgb(3, 15, 179);
 }
 
 .dark {
@@ -65,37 +68,19 @@ button {
 }
 
 .dark h1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 8vw;
-    transition: all 2s;
     color: white;
 }
 
 .dark h2 {
     color: white;
-    display: flex;
-    justify-content: left;
-    margin-left: 10px;
-    align-items: flex-start;
-    font-size: 3vw;
-    font-family:'Times New Roman', Times, serif;
 }
 
 .dark .user-input {
     color: white;
-    margin-bottom: 5px;
-    margin-bottom: 5px;
-    width: 50vw;
 }
 
 .dark .user-input-label {
         color: white;
-        margin-bottom: 5px;
-        margin-bottom: 5px;
-        width: 50vw;
-        
     }
 
 .user-input {
@@ -103,13 +88,14 @@ button {
     margin: 5px;
     margin-left: 15px;
     width: 50vw;
-    padding: 1vw 1vh;
+    height: 1rem;
+    padding: .5rem .5rem;
     border-radius: 4px;
 }
 
 .user-input-label {
     justify-content: left;
-    font-size: 3vw;
+    font-size: 1.5rem;
     margin-left: 10px;
     margin-bottom: 5px;
     padding: 5px 5px 5px;
@@ -182,17 +168,24 @@ input[type="checkbox"]:checked + .toggle-container:after {
 /* text over new meme formatting */
 .results {
     position: relative;
-    color: white;
     text-align: center;
     padding: 10px;
 }
 
 .topText {
-    position: absolute;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+    color: white;
+    -webkit-text-stroke: 2px black;
+
   }
 
 .bottomText {
-    position: absolute;
+    position: bottom;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+    color: white;
+    -webkit-text-stroke: 2px black;
   }
 
 .newImg {

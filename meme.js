@@ -14,7 +14,9 @@ function randomRGB(){
     const green = Math.floor(Math.random() * 256);
     const blue = Math.floor(Math.random() * 256);
     return `rgb(${red},${green},${blue})`
-}
+} // can also use hsl color option. using 365 for red, and 100 for green and blue to get the range correct for hsl
+// which is hsl(number from 0 to 360, number from 0 to 100%, number from 0 to 100%)
+// then for the return statement use: `hsl(${red},${green}%,${blue}%)
 
 // this is how you change the h1 color to random colors before adding any spans and seperating the text indiviually
 // const h1 = document.querySelector('h1');
@@ -85,6 +87,7 @@ function makeMeme() {
 
     const newMeme = document.querySelector("#results")
     newMeme.append(newMemeTopText, newMemeBottomText, newMemeImg, removeButton)
+    console.log(newMeme)
 
     topText.value = ''
     bottomText.value = ''
